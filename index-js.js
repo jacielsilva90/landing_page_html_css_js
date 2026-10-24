@@ -60,7 +60,7 @@ function slide2(){
 
 ////
 /*A função emailjs.init() inicializa o SDK do EmailJS com sua Public Key. */
-//emailjs.init({ publicKey: 'lDpZj8bjoRSTnBKz0' }); //colocar no html
+//emailjs.init({ publicKey: '' }); //colocar no html
 const formcontato=document.getElementById('contactForm')
 const feedback=document.getElementById('feedback')
 formcontato.addEventListener('submit', function(e){
@@ -68,7 +68,7 @@ formcontato.addEventListener('submit', function(e){
 	if (!document.getElementById('emailcontato').value.includes('@')){
 		alert('insira @')
 	};
-	emailjs.sendForm('service_gmailid', 'template_gmailid', this) //this=#id_form
+	emailjs.sendForm('service_id', 'template_id', this) //this=#id_form
 		.then(function(response){
 			feedback.textContent='Enviado';
 			console.log('SUCCESS!', response.status, response.text);		
